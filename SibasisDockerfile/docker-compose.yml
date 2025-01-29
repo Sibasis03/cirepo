@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  go-app:
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - my-net
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - my-net
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
+  
+  
