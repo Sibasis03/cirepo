@@ -20,3 +20,11 @@
 # Go workspace file
 go.work
 go.work.sum
+
+
+static/
+go.mod
+LICENSE
+main/
+main_test.go
+main.go
