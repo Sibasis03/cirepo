@@ -1,3 +1,3 @@
-module github.com/iam-veeramalla/go-web-app
+module github.com/Sibasis03/go-web-app-docker.git
 
-go 1.22.5
+go 1.23
